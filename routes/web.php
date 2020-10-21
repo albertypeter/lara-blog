@@ -16,19 +16,23 @@ Route::get('/', function () {
 });
 
 Route::get('/show/{id}',[
-    'as' => 'show', 'uses' => 'UserController@showAction'
+    'as' => 'show', 'uses' => 'PlayerController@showAction'
 ]);
 
 Route::get('/insert',[
-   'as' => 'insert','uses' => 'UserController@insertAction'
+   'as' => 'insert','uses' => 'PlayerController@insertAction'
 ]);
 
 Route::get('/update/{id}', [
-   'as' => 'update','uses' => 'UserController@updateAction'
+   'as' => 'update','uses' => 'PlayerController@updateAction'
 ]);
 
 Route::get('/delete/{id}', [
-   'as' => 'delete','uses' => 'UserController@deleteAction'
+   'as' => 'delete','uses' => 'PlayerController@deleteAction'
+]);
+
+Route::get('/showAll', [
+    'as' => 'showAll','uses' => 'PlayerController@showAllAction'
 ]);
 
 
